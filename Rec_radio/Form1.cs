@@ -995,6 +995,38 @@ namespace Rec_radio
                }));
 
         }
+
+        private void btnFN_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(label9.Text))
+            {
+                byte[] audioBytes = File.ReadAllBytes(txtPath.Text);
+
+                string fileName = txtPath.Text.Replace("audio\\", "audio\\FN\\");
+
+
+                File.WriteAllBytes(fileName, audioBytes);
+
+                MessageBox.Show($"WAV file saved to: {fileName}", "File Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
+        private void btnTN_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(label9.Text))
+            {
+                byte[] audioBytes = File.ReadAllBytes(txtPath.Text);
+
+                string fileName = txtPath.Text.Replace("audio\\", "audio\\TN\\");
+
+
+                File.WriteAllBytes(fileName, audioBytes);
+
+                MessageBox.Show($"WAV file saved to: {fileName}", "File Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
     }
 }
 
