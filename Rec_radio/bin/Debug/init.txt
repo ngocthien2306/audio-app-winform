@@ -1,0 +1,8 @@
+C:\Users\Admin\source\repos\audio-app-winform\Rec_radio\audio
+
+16000
+16
+LINE_IN
+
+
+1

@@ -30,19 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Tree = new System.Windows.Forms.NotifyIcon(this.components);
             this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.delMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.audioPogressBar = new Rec_radio.AudioProgressBar();
             this.trackBarAudio = new MetroFramework.Controls.MetroTrackBar();
-            this.buttonOpenDir = new System.Windows.Forms.Button();
-            this.buttonStopAudio = new System.Windows.Forms.Button();
             this.listViewInfoTrack = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -50,9 +47,6 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labelTimeStop = new System.Windows.Forms.Label();
             this.labelTimeStart = new System.Windows.Forms.Label();
-            this.buttonRefresh = new System.Windows.Forms.Button();
-            this.buttonPush = new System.Windows.Forms.Button();
-            this.buttonPause = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,17 +55,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.directoryName = new System.Windows.Forms.TextBox();
             this.Record = new System.Windows.Forms.TabPage();
-            this.folderDir = new System.Windows.Forms.Button();
+            this.triggerSoftwareBtn = new System.Windows.Forms.Button();
             this.chart_Animation = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.buttonStartRec = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.buttonStopRec = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxCheck = new System.Windows.Forms.ComboBox();
             this.labelState = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBoxFront = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.comboBoxCapture = new System.Windows.Forms.ComboBox();
             this.comboBoxKhz = new System.Windows.Forms.ComboBox();
             this.comboBoxKbps = new System.Windows.Forms.ComboBox();
@@ -80,7 +71,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonWma = new System.Windows.Forms.RadioButton();
             this.buttonOpen = new System.Windows.Forms.Button();
-            this.buttonRemote = new System.Windows.Forms.Button();
             this.radioButtonAac = new System.Windows.Forms.RadioButton();
             this.comboBoxLame = new System.Windows.Forms.ComboBox();
             this.comboBoxSampleRate = new System.Windows.Forms.ComboBox();
@@ -92,20 +82,41 @@
             this.radioButtonMp3 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkDataDir = new System.Windows.Forms.CheckBox();
-            this.buttonSaveSettings = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.listBoxInfo = new System.Windows.Forms.ListBox();
+            this.folderDir = new System.Windows.Forms.Button();
+            this.buttonStopRec = new System.Windows.Forms.Button();
+            this.pictureBoxFront = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBack = new System.Windows.Forms.PictureBox();
+            this.buttonOpenDir = new System.Windows.Forms.Button();
+            this.buttonStopAudio = new System.Windows.Forms.Button();
+            this.delMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonRefresh = new System.Windows.Forms.Button();
+            this.buttonPush = new System.Windows.Forms.Button();
+            this.buttonPause = new System.Windows.Forms.Button();
+            this.buttonRemote = new System.Windows.Forms.Button();
+            this.buttonSaveSettings = new System.Windows.Forms.Button();
+            this.btnPlay = new System.Windows.Forms.Button();
+            this.txtPath = new System.Windows.Forms.TextBox();
+            this.btnSaveTN = new System.Windows.Forms.Button();
+            this.labelTime = new System.Windows.Forms.Label();
+            this.txtTime = new System.Windows.Forms.TextBox();
+            this.labelConf = new System.Windows.Forms.Label();
+            this.txtConf = new System.Windows.Forms.TextBox();
+            this.labelClass = new System.Windows.Forms.Label();
+            this.txtClass = new System.Windows.Forms.TextBox();
+            this.btnResult = new System.Windows.Forms.Button();
             this.contextMenuStrip.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.Record.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Animation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFront)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.panelSettingPlayer.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFront)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -134,17 +145,6 @@
             this.contextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.contextMenuStrip.Size = new System.Drawing.Size(129, 26);
             // 
-            // delMenuItem
-            // 
-            this.delMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.delMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("delMenuItem.Image")));
-            this.delMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.delMenuItem.Name = "delMenuItem";
-            this.delMenuItem.Size = new System.Drawing.Size(128, 22);
-            this.delMenuItem.Text = "Delete List";
-            this.delMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
-            this.delMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Window;
@@ -162,7 +162,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(421, 273);
+            this.tabPage2.Size = new System.Drawing.Size(591, 386);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Player";
             // 
@@ -181,7 +181,7 @@
             this.audioPogressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))));
             this.audioPogressBar.ProgressTextType = Rec_radio.AudioProgressBar.AudioProgressTextType.Percent;
             this.audioPogressBar.ShowProgressText = false;
-            this.audioPogressBar.Size = new System.Drawing.Size(409, 70);
+            this.audioPogressBar.Size = new System.Drawing.Size(576, 70);
             this.audioPogressBar.TabIndex = 25;
             this.audioPogressBar.Text = "AudioProgressBar";
             this.audioPogressBar.Value = 0;
@@ -193,44 +193,11 @@
             this.trackBarAudio.Location = new System.Drawing.Point(6, 94);
             this.trackBarAudio.MouseWheelBarPartitions = 1;
             this.trackBarAudio.Name = "trackBarAudio";
-            this.trackBarAudio.Size = new System.Drawing.Size(409, 10);
+            this.trackBarAudio.Size = new System.Drawing.Size(576, 10);
             this.trackBarAudio.TabIndex = 26;
             this.trackBarAudio.Text = "metroTrackBar1";
             this.trackBarAudio.Value = 0;
             this.trackBarAudio.Scroll += new System.Windows.Forms.ScrollEventHandler(this.MetroTrackBar_Scroll);
-            // 
-            // buttonOpenDir
-            // 
-            this.buttonOpenDir.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonOpenDir.BackgroundImage = global::Rec_radio.Properties.Resources.folder_dir;
-            this.buttonOpenDir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonOpenDir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonOpenDir.FlatAppearance.BorderSize = 0;
-            this.buttonOpenDir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonOpenDir.ForeColor = System.Drawing.Color.Black;
-            this.buttonOpenDir.Location = new System.Drawing.Point(247, 109);
-            this.buttonOpenDir.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonOpenDir.Name = "buttonOpenDir";
-            this.buttonOpenDir.Size = new System.Drawing.Size(30, 30);
-            this.buttonOpenDir.TabIndex = 32;
-            this.buttonOpenDir.UseVisualStyleBackColor = false;
-            this.buttonOpenDir.Click += new System.EventHandler(this.Button_Click_OpenDir);
-            // 
-            // buttonStopAudio
-            // 
-            this.buttonStopAudio.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonStopAudio.BackgroundImage = global::Rec_radio.Properties.Resources.stop_list;
-            this.buttonStopAudio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonStopAudio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStopAudio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonStopAudio.ForeColor = System.Drawing.Color.Black;
-            this.buttonStopAudio.Location = new System.Drawing.Point(183, 109);
-            this.buttonStopAudio.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonStopAudio.Name = "buttonStopAudio";
-            this.buttonStopAudio.Size = new System.Drawing.Size(30, 30);
-            this.buttonStopAudio.TabIndex = 31;
-            this.buttonStopAudio.UseVisualStyleBackColor = false;
-            this.buttonStopAudio.Click += new System.EventHandler(this.Stop_Menu_Item_Click);
             // 
             // listViewInfoTrack
             // 
@@ -246,7 +213,7 @@
             this.listViewInfoTrack.LargeImageList = this.imageList;
             this.listViewInfoTrack.Location = new System.Drawing.Point(3, 143);
             this.listViewInfoTrack.Name = "listViewInfoTrack";
-            this.listViewInfoTrack.Size = new System.Drawing.Size(415, 124);
+            this.listViewInfoTrack.Size = new System.Drawing.Size(585, 240);
             this.listViewInfoTrack.SmallImageList = this.imageList;
             this.listViewInfoTrack.TabIndex = 22;
             this.listViewInfoTrack.UseCompatibleStateImageBehavior = false;
@@ -277,7 +244,7 @@
             this.labelTimeStop.AutoSize = true;
             this.labelTimeStop.BackColor = System.Drawing.Color.Transparent;
             this.labelTimeStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTimeStop.Location = new System.Drawing.Point(374, 4);
+            this.labelTimeStop.Location = new System.Drawing.Point(539, 4);
             this.labelTimeStop.Name = "labelTimeStop";
             this.labelTimeStop.Size = new System.Drawing.Size(43, 13);
             this.labelTimeStop.TabIndex = 25;
@@ -294,55 +261,6 @@
             this.labelTimeStart.TabIndex = 24;
             this.labelTimeStart.Text = "0:00:00";
             // 
-            // buttonRefresh
-            // 
-            this.buttonRefresh.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonRefresh.BackgroundImage = global::Rec_radio.Properties.Resources.updata;
-            this.buttonRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRefresh.FlatAppearance.BorderSize = 0;
-            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonRefresh.ForeColor = System.Drawing.Color.Black;
-            this.buttonRefresh.Location = new System.Drawing.Point(215, 109);
-            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(30, 30);
-            this.buttonRefresh.TabIndex = 21;
-            this.buttonRefresh.UseVisualStyleBackColor = false;
-            this.buttonRefresh.Click += new System.EventHandler(this.Button_Click_Refresh);
-            // 
-            // buttonPush
-            // 
-            this.buttonPush.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonPush.BackgroundImage = global::Rec_radio.Properties.Resources.play;
-            this.buttonPush.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonPush.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPush.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonPush.ForeColor = System.Drawing.Color.Black;
-            this.buttonPush.Location = new System.Drawing.Point(119, 109);
-            this.buttonPush.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonPush.Name = "buttonPush";
-            this.buttonPush.Size = new System.Drawing.Size(30, 30);
-            this.buttonPush.TabIndex = 20;
-            this.buttonPush.UseVisualStyleBackColor = false;
-            this.buttonPush.Click += new System.EventHandler(this.Play_Menu_Item_Click);
-            // 
-            // buttonPause
-            // 
-            this.buttonPause.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonPause.BackgroundImage = global::Rec_radio.Properties.Resources.pause_play;
-            this.buttonPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonPause.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonPause.ForeColor = System.Drawing.Color.Black;
-            this.buttonPause.Location = new System.Drawing.Point(151, 109);
-            this.buttonPause.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonPause.Name = "buttonPause";
-            this.buttonPause.Size = new System.Drawing.Size(30, 30);
-            this.buttonPause.TabIndex = 30;
-            this.buttonPause.UseVisualStyleBackColor = false;
-            this.buttonPause.Click += new System.EventHandler(this.Pause_Menu_Item_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -355,7 +273,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(301, 54);
+            this.label7.Location = new System.Drawing.Point(354, 51);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 13);
             this.label7.TabIndex = 17;
@@ -364,7 +282,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(305, 27);
+            this.label6.Location = new System.Drawing.Point(358, 24);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 13);
             this.label6.TabIndex = 16;
@@ -373,7 +291,7 @@
             // radioButtonStereo
             // 
             this.radioButtonStereo.AutoSize = true;
-            this.radioButtonStereo.Location = new System.Drawing.Point(304, 87);
+            this.radioButtonStereo.Location = new System.Drawing.Point(459, 85);
             this.radioButtonStereo.Name = "radioButtonStereo";
             this.radioButtonStereo.Size = new System.Drawing.Size(56, 17);
             this.radioButtonStereo.TabIndex = 20;
@@ -386,7 +304,7 @@
             // radioButtonMono
             // 
             this.radioButtonMono.AutoSize = true;
-            this.radioButtonMono.Location = new System.Drawing.Point(246, 87);
+            this.radioButtonMono.Location = new System.Drawing.Point(401, 85);
             this.radioButtonMono.Name = "radioButtonMono";
             this.radioButtonMono.Size = new System.Drawing.Size(52, 17);
             this.radioButtonMono.TabIndex = 19;
@@ -409,7 +327,7 @@
             // 
             this.directoryName.Location = new System.Drawing.Point(62, 24);
             this.directoryName.Name = "directoryName";
-            this.directoryName.Size = new System.Drawing.Size(206, 20);
+            this.directoryName.Size = new System.Drawing.Size(258, 20);
             this.directoryName.TabIndex = 0;
             this.directoryName.Text = "D:\\AUDIO\\";
             // 
@@ -417,6 +335,7 @@
             // 
             this.Record.BackColor = System.Drawing.SystemColors.Window;
             this.Record.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Record.Controls.Add(this.triggerSoftwareBtn);
             this.Record.Controls.Add(this.folderDir);
             this.Record.Controls.Add(this.chart_Animation);
             this.Record.Controls.Add(this.buttonStartRec);
@@ -431,59 +350,55 @@
             this.Record.Location = new System.Drawing.Point(4, 22);
             this.Record.Name = "Record";
             this.Record.Padding = new System.Windows.Forms.Padding(3);
-            this.Record.Size = new System.Drawing.Size(421, 273);
+            this.Record.Size = new System.Drawing.Size(591, 386);
             this.Record.TabIndex = 0;
             this.Record.Text = "Record";
             // 
-            // folderDir
+            // triggerSoftwareBtn
             // 
-            this.folderDir.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.folderDir.BackgroundImage = global::Rec_radio.Properties.Resources.folder_dir;
-            this.folderDir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.folderDir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.folderDir.FlatAppearance.BorderSize = 0;
-            this.folderDir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.folderDir.ForeColor = System.Drawing.Color.Black;
-            this.folderDir.Location = new System.Drawing.Point(56, 44);
-            this.folderDir.Margin = new System.Windows.Forms.Padding(1);
-            this.folderDir.Name = "folderDir";
-            this.folderDir.Size = new System.Drawing.Size(30, 30);
-            this.folderDir.TabIndex = 25;
-            this.folderDir.UseVisualStyleBackColor = false;
-            this.folderDir.Click += new System.EventHandler(this.Button_Click_OpenDir);
+            this.triggerSoftwareBtn.BackColor = System.Drawing.Color.White;
+            this.triggerSoftwareBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.triggerSoftwareBtn.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.triggerSoftwareBtn.Location = new System.Drawing.Point(453, 14);
+            this.triggerSoftwareBtn.Name = "triggerSoftwareBtn";
+            this.triggerSoftwareBtn.Size = new System.Drawing.Size(122, 60);
+            this.triggerSoftwareBtn.TabIndex = 26;
+            this.triggerSoftwareBtn.Text = "Software Trigger";
+            this.triggerSoftwareBtn.UseVisualStyleBackColor = false;
+            this.triggerSoftwareBtn.Click += new System.EventHandler(this.triggerSoftwareBtn_Click);
             // 
             // chart_Animation
             // 
             this.chart_Animation.BackColor = System.Drawing.Color.Transparent;
             this.chart_Animation.BackSecondaryColor = System.Drawing.Color.Silver;
-            chartArea1.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
-            chartArea1.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
-            chartArea1.AxisY2.ScaleBreakStyle.BreakLineStyle = System.Windows.Forms.DataVisualization.Charting.BreakLineStyle.Straight;
-            chartArea1.BackColor = System.Drawing.Color.White;
-            chartArea1.BorderColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartArea1";
-            this.chart_Animation.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.HeaderSeparatorColor = System.Drawing.Color.Silver;
-            legend1.ItemColumnSeparatorColor = System.Drawing.Color.Gainsboro;
-            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
-            legend1.Name = "Legend1";
-            legend1.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
-            this.chart_Animation.Legends.Add(legend1);
+            chartArea2.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.None;
+            chartArea2.AlignmentStyle = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentStyles.None;
+            chartArea2.AxisY2.ScaleBreakStyle.BreakLineStyle = System.Windows.Forms.DataVisualization.Charting.BreakLineStyle.Straight;
+            chartArea2.BackColor = System.Drawing.Color.White;
+            chartArea2.BorderColor = System.Drawing.Color.White;
+            chartArea2.Name = "ChartArea1";
+            this.chart_Animation.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.HeaderSeparatorColor = System.Drawing.Color.Silver;
+            legend2.ItemColumnSeparatorColor = System.Drawing.Color.Gainsboro;
+            legend2.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
+            legend2.Name = "Legend1";
+            legend2.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
+            this.chart_Animation.Legends.Add(legend2);
             this.chart_Animation.Location = new System.Drawing.Point(3, 115);
             this.chart_Animation.Name = "chart_Animation";
             this.chart_Animation.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart_Animation.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.ForestGreen};
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.Red;
-            series1.LabelForeColor = System.Drawing.Color.Empty;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.YValuesPerPoint = 4;
-            this.chart_Animation.Series.Add(series1);
-            this.chart_Animation.Size = new System.Drawing.Size(417, 155);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Red;
+            series2.LabelForeColor = System.Drawing.Color.Empty;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.YValuesPerPoint = 4;
+            this.chart_Animation.Series.Add(series2);
+            this.chart_Animation.Size = new System.Drawing.Size(582, 265);
             this.chart_Animation.TabIndex = 24;
             this.chart_Animation.Text = "chart1";
             // 
@@ -512,22 +427,6 @@
             this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 18;
             this.label9.Text = "info track";
-            // 
-            // buttonStopRec
-            // 
-            this.buttonStopRec.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonStopRec.BackgroundImage = global::Rec_radio.Properties.Resources.pause_play;
-            this.buttonStopRec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonStopRec.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStopRec.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonStopRec.ForeColor = System.Drawing.Color.Black;
-            this.buttonStopRec.Location = new System.Drawing.Point(8, 15);
-            this.buttonStopRec.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonStopRec.Name = "buttonStopRec";
-            this.buttonStopRec.Size = new System.Drawing.Size(38, 23);
-            this.buttonStopRec.TabIndex = 12;
-            this.buttonStopRec.UseVisualStyleBackColor = false;
-            this.buttonStopRec.Click += new System.EventHandler(this.Stop_Click);
             // 
             // label4
             // 
@@ -575,28 +474,6 @@
             this.label3.Text = "RECORDING";
             this.label3.Visible = false;
             // 
-            // pictureBoxFront
-            // 
-            this.pictureBoxFront.ErrorImage = null;
-            this.pictureBoxFront.Image = global::Rec_radio.Properties.Resources.progres;
-            this.pictureBoxFront.Location = new System.Drawing.Point(91, 17);
-            this.pictureBoxFront.Name = "pictureBoxFront";
-            this.pictureBoxFront.Size = new System.Drawing.Size(324, 13);
-            this.pictureBoxFront.TabIndex = 16;
-            this.pictureBoxFront.TabStop = false;
-            // 
-            // pictureBoxBack
-            // 
-            this.pictureBoxBack.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBoxBack.ErrorImage = null;
-            this.pictureBoxBack.Image = global::Rec_radio.Properties.Resources.progres_s;
-            this.pictureBoxBack.Location = new System.Drawing.Point(90, 16);
-            this.pictureBoxBack.Name = "pictureBoxBack";
-            this.pictureBoxBack.Size = new System.Drawing.Size(325, 15);
-            this.pictureBoxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxBack.TabIndex = 17;
-            this.pictureBoxBack.TabStop = false;
-            // 
             // comboBoxCapture
             // 
             this.comboBoxCapture.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -605,7 +482,7 @@
             this.comboBoxCapture.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.comboBoxCapture.Location = new System.Drawing.Point(62, 86);
             this.comboBoxCapture.Name = "comboBoxCapture";
-            this.comboBoxCapture.Size = new System.Drawing.Size(163, 21);
+            this.comboBoxCapture.Size = new System.Drawing.Size(258, 21);
             this.comboBoxCapture.TabIndex = 18;
             // 
             // comboBoxKhz
@@ -614,9 +491,9 @@
             this.comboBoxKhz.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxKhz.FormattingEnabled = true;
             this.comboBoxKhz.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBoxKhz.Location = new System.Drawing.Point(336, 22);
+            this.comboBoxKhz.Location = new System.Drawing.Point(389, 19);
             this.comboBoxKhz.Name = "comboBoxKhz";
-            this.comboBoxKhz.Size = new System.Drawing.Size(61, 21);
+            this.comboBoxKhz.Size = new System.Drawing.Size(162, 21);
             this.comboBoxKhz.TabIndex = 14;
             // 
             // comboBoxKbps
@@ -625,9 +502,9 @@
             this.comboBoxKbps.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxKbps.FormattingEnabled = true;
             this.comboBoxKbps.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBoxKbps.Location = new System.Drawing.Point(337, 50);
+            this.comboBoxKbps.Location = new System.Drawing.Point(390, 47);
             this.comboBoxKbps.Name = "comboBoxKbps";
-            this.comboBoxKbps.Size = new System.Drawing.Size(60, 21);
+            this.comboBoxKbps.Size = new System.Drawing.Size(161, 21);
             this.comboBoxKbps.TabIndex = 15;
             // 
             // panelSettingPlayer
@@ -639,7 +516,7 @@
             this.panelSettingPlayer.Multiline = true;
             this.panelSettingPlayer.Name = "panelSettingPlayer";
             this.panelSettingPlayer.SelectedIndex = 0;
-            this.panelSettingPlayer.Size = new System.Drawing.Size(429, 299);
+            this.panelSettingPlayer.Size = new System.Drawing.Size(599, 412);
             this.panelSettingPlayer.TabIndex = 18;
             // 
             // tabPage1
@@ -649,7 +526,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(421, 273);
+            this.tabPage1.Size = new System.Drawing.Size(591, 386);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Settings";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -670,7 +547,7 @@
             this.groupBox1.Controls.Add(this.radioButtonMp3);
             this.groupBox1.Location = new System.Drawing.Point(6, 129);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(410, 130);
+            this.groupBox1.Size = new System.Drawing.Size(579, 251);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Conversion";
@@ -678,7 +555,7 @@
             // radioButtonWma
             // 
             this.radioButtonWma.AutoSize = true;
-            this.radioButtonWma.Location = new System.Drawing.Point(256, 88);
+            this.radioButtonWma.Location = new System.Drawing.Point(417, 103);
             this.radioButtonWma.Name = "radioButtonWma";
             this.radioButtonWma.Size = new System.Drawing.Size(52, 17);
             this.radioButtonWma.TabIndex = 28;
@@ -697,7 +574,7 @@
             this.buttonOpen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonOpen.ForeColor = System.Drawing.Color.Black;
             this.buttonOpen.ImageKey = "(отсутствует)";
-            this.buttonOpen.Location = new System.Drawing.Point(369, 42);
+            this.buttonOpen.Location = new System.Drawing.Point(527, 42);
             this.buttonOpen.Name = "buttonOpen";
             this.buttonOpen.Size = new System.Drawing.Size(28, 20);
             this.buttonOpen.TabIndex = 26;
@@ -705,29 +582,10 @@
             this.buttonOpen.UseVisualStyleBackColor = false;
             this.buttonOpen.Click += new System.EventHandler(this.Button_Click_Open_Dir);
             // 
-            // buttonRemote
-            // 
-            this.buttonRemote.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonRemote.BackgroundImage = global::Rec_radio.Properties.Resources.refrech;
-            this.buttonRemote.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonRemote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRemote.FlatAppearance.BorderSize = 0;
-            this.buttonRemote.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonRemote.ForeColor = System.Drawing.Color.Black;
-            this.buttonRemote.ImageKey = "(отсутствует)";
-            this.buttonRemote.Location = new System.Drawing.Point(368, 92);
-            this.buttonRemote.Name = "buttonRemote";
-            this.buttonRemote.Size = new System.Drawing.Size(30, 30);
-            this.buttonRemote.TabIndex = 16;
-            this.buttonRemote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonRemote.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.buttonRemote.UseVisualStyleBackColor = false;
-            this.buttonRemote.Click += new System.EventHandler(this.Button_Click_Remonte);
-            // 
             // radioButtonAac
             // 
             this.radioButtonAac.AutoSize = true;
-            this.radioButtonAac.Location = new System.Drawing.Point(256, 65);
+            this.radioButtonAac.Location = new System.Drawing.Point(417, 80);
             this.radioButtonAac.Name = "radioButtonAac";
             this.radioButtonAac.Size = new System.Drawing.Size(46, 17);
             this.radioButtonAac.TabIndex = 27;
@@ -743,9 +601,9 @@
             this.comboBoxLame.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxLame.FormattingEnabled = true;
             this.comboBoxLame.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBoxLame.Location = new System.Drawing.Point(18, 84);
+            this.comboBoxLame.Location = new System.Drawing.Point(18, 96);
             this.comboBoxLame.Name = "comboBoxLame";
-            this.comboBoxLame.Size = new System.Drawing.Size(105, 21);
+            this.comboBoxLame.Size = new System.Drawing.Size(268, 21);
             this.comboBoxLame.TabIndex = 18;
             // 
             // comboBoxSampleRate
@@ -756,13 +614,13 @@
             this.comboBoxSampleRate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.comboBoxSampleRate.Location = new System.Drawing.Point(18, 42);
             this.comboBoxSampleRate.Name = "comboBoxSampleRate";
-            this.comboBoxSampleRate.Size = new System.Drawing.Size(105, 21);
+            this.comboBoxSampleRate.Size = new System.Drawing.Size(268, 21);
             this.comboBoxSampleRate.TabIndex = 15;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(200, 26);
+            this.label16.Location = new System.Drawing.Point(358, 26);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(75, 13);
             this.label16.TabIndex = 25;
@@ -779,7 +637,7 @@
             // 
             // textBoxFileAudio
             // 
-            this.textBoxFileAudio.Location = new System.Drawing.Point(203, 42);
+            this.textBoxFileAudio.Location = new System.Drawing.Point(361, 42);
             this.textBoxFileAudio.Name = "textBoxFileAudio";
             this.textBoxFileAudio.Size = new System.Drawing.Size(160, 20);
             this.textBoxFileAudio.TabIndex = 24;
@@ -787,7 +645,7 @@
             // radioButtonWav
             // 
             this.radioButtonWav.AutoSize = true;
-            this.radioButtonWav.Location = new System.Drawing.Point(203, 65);
+            this.radioButtonWav.Location = new System.Drawing.Point(364, 80);
             this.radioButtonWav.Name = "radioButtonWav";
             this.radioButtonWav.Size = new System.Drawing.Size(50, 17);
             this.radioButtonWav.TabIndex = 21;
@@ -800,7 +658,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(15, 68);
+            this.label14.Location = new System.Drawing.Point(15, 80);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(69, 13);
             this.label14.TabIndex = 19;
@@ -809,7 +667,7 @@
             // radioButtonMp3
             // 
             this.radioButtonMp3.AutoSize = true;
-            this.radioButtonMp3.Location = new System.Drawing.Point(203, 88);
+            this.radioButtonMp3.Location = new System.Drawing.Point(364, 103);
             this.radioButtonMp3.Name = "radioButtonMp3";
             this.radioButtonMp3.Size = new System.Drawing.Size(47, 17);
             this.radioButtonMp3.TabIndex = 22;
@@ -835,7 +693,7 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(410, 117);
+            this.groupBox2.Size = new System.Drawing.Size(579, 117);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Recoder";
@@ -851,23 +709,6 @@
             this.checkDataDir.UseVisualStyleBackColor = true;
             this.checkDataDir.CheckedChanged += new System.EventHandler(this.Check_DataDir_CheckedChanged);
             // 
-            // buttonSaveSettings
-            // 
-            this.buttonSaveSettings.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonSaveSettings.BackgroundImage = global::Rec_radio.Properties.Resources.save;
-            this.buttonSaveSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonSaveSettings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSaveSettings.FlatAppearance.BorderSize = 0;
-            this.buttonSaveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonSaveSettings.ForeColor = System.Drawing.Color.Black;
-            this.buttonSaveSettings.ImageKey = "(отсутствует)";
-            this.buttonSaveSettings.Location = new System.Drawing.Point(368, 80);
-            this.buttonSaveSettings.Name = "buttonSaveSettings";
-            this.buttonSaveSettings.Size = new System.Drawing.Size(30, 30);
-            this.buttonSaveSettings.TabIndex = 1;
-            this.buttonSaveSettings.UseVisualStyleBackColor = false;
-            this.buttonSaveSettings.Click += new System.EventHandler(this.ButtonSaveSettings_Click);
-            // 
             // timer2
             // 
             this.timer2.Tick += new System.EventHandler(this.Timer_Data_Tick);
@@ -879,17 +720,307 @@
             // listBoxInfo
             // 
             this.listBoxInfo.FormattingEnabled = true;
-            this.listBoxInfo.Location = new System.Drawing.Point(6, 307);
+            this.listBoxInfo.Location = new System.Drawing.Point(0, 411);
             this.listBoxInfo.Name = "listBoxInfo";
             this.listBoxInfo.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBoxInfo.Size = new System.Drawing.Size(421, 95);
+            this.listBoxInfo.Size = new System.Drawing.Size(597, 134);
             this.listBoxInfo.TabIndex = 24;
+            // 
+            // folderDir
+            // 
+            this.folderDir.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.folderDir.BackgroundImage = global::Rec_radio.Properties.Resources.folder_dir;
+            this.folderDir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.folderDir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.folderDir.FlatAppearance.BorderSize = 0;
+            this.folderDir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.folderDir.ForeColor = System.Drawing.Color.Black;
+            this.folderDir.Location = new System.Drawing.Point(56, 44);
+            this.folderDir.Margin = new System.Windows.Forms.Padding(1);
+            this.folderDir.Name = "folderDir";
+            this.folderDir.Size = new System.Drawing.Size(30, 30);
+            this.folderDir.TabIndex = 25;
+            this.folderDir.UseVisualStyleBackColor = false;
+            this.folderDir.Click += new System.EventHandler(this.Button_Click_OpenDir);
+            // 
+            // buttonStopRec
+            // 
+            this.buttonStopRec.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonStopRec.BackgroundImage = global::Rec_radio.Properties.Resources.pause_play;
+            this.buttonStopRec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonStopRec.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStopRec.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonStopRec.ForeColor = System.Drawing.Color.Black;
+            this.buttonStopRec.Location = new System.Drawing.Point(8, 15);
+            this.buttonStopRec.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonStopRec.Name = "buttonStopRec";
+            this.buttonStopRec.Size = new System.Drawing.Size(38, 23);
+            this.buttonStopRec.TabIndex = 12;
+            this.buttonStopRec.UseVisualStyleBackColor = false;
+            this.buttonStopRec.Click += new System.EventHandler(this.Stop_Click);
+            // 
+            // pictureBoxFront
+            // 
+            this.pictureBoxFront.ErrorImage = null;
+            this.pictureBoxFront.Image = global::Rec_radio.Properties.Resources.progres;
+            this.pictureBoxFront.Location = new System.Drawing.Point(91, 17);
+            this.pictureBoxFront.Name = "pictureBoxFront";
+            this.pictureBoxFront.Size = new System.Drawing.Size(324, 13);
+            this.pictureBoxFront.TabIndex = 16;
+            this.pictureBoxFront.TabStop = false;
+            // 
+            // pictureBoxBack
+            // 
+            this.pictureBoxBack.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBoxBack.ErrorImage = null;
+            this.pictureBoxBack.Image = global::Rec_radio.Properties.Resources.progres_s;
+            this.pictureBoxBack.Location = new System.Drawing.Point(90, 16);
+            this.pictureBoxBack.Name = "pictureBoxBack";
+            this.pictureBoxBack.Size = new System.Drawing.Size(325, 15);
+            this.pictureBoxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBack.TabIndex = 17;
+            this.pictureBoxBack.TabStop = false;
+            // 
+            // buttonOpenDir
+            // 
+            this.buttonOpenDir.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonOpenDir.BackgroundImage = global::Rec_radio.Properties.Resources.folder_dir;
+            this.buttonOpenDir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonOpenDir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOpenDir.FlatAppearance.BorderSize = 0;
+            this.buttonOpenDir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonOpenDir.ForeColor = System.Drawing.Color.Black;
+            this.buttonOpenDir.Location = new System.Drawing.Point(342, 109);
+            this.buttonOpenDir.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonOpenDir.Name = "buttonOpenDir";
+            this.buttonOpenDir.Size = new System.Drawing.Size(30, 30);
+            this.buttonOpenDir.TabIndex = 32;
+            this.buttonOpenDir.UseVisualStyleBackColor = false;
+            this.buttonOpenDir.Click += new System.EventHandler(this.Button_Click_OpenDir);
+            // 
+            // buttonStopAudio
+            // 
+            this.buttonStopAudio.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonStopAudio.BackgroundImage = global::Rec_radio.Properties.Resources.stop_list;
+            this.buttonStopAudio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonStopAudio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStopAudio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonStopAudio.ForeColor = System.Drawing.Color.Black;
+            this.buttonStopAudio.Location = new System.Drawing.Point(278, 109);
+            this.buttonStopAudio.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonStopAudio.Name = "buttonStopAudio";
+            this.buttonStopAudio.Size = new System.Drawing.Size(30, 30);
+            this.buttonStopAudio.TabIndex = 31;
+            this.buttonStopAudio.UseVisualStyleBackColor = false;
+            this.buttonStopAudio.Click += new System.EventHandler(this.Stop_Menu_Item_Click);
+            // 
+            // delMenuItem
+            // 
+            this.delMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.delMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("delMenuItem.Image")));
+            this.delMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.delMenuItem.Name = "delMenuItem";
+            this.delMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.delMenuItem.Text = "Delete List";
+            this.delMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.delMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonRefresh.BackgroundImage = global::Rec_radio.Properties.Resources.updata;
+            this.buttonRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRefresh.FlatAppearance.BorderSize = 0;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRefresh.ForeColor = System.Drawing.Color.Black;
+            this.buttonRefresh.Location = new System.Drawing.Point(310, 109);
+            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(30, 30);
+            this.buttonRefresh.TabIndex = 21;
+            this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.buttonRefresh.Click += new System.EventHandler(this.Button_Click_Refresh);
+            // 
+            // buttonPush
+            // 
+            this.buttonPush.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonPush.BackgroundImage = global::Rec_radio.Properties.Resources.play;
+            this.buttonPush.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonPush.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPush.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonPush.ForeColor = System.Drawing.Color.Black;
+            this.buttonPush.Location = new System.Drawing.Point(214, 109);
+            this.buttonPush.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonPush.Name = "buttonPush";
+            this.buttonPush.Size = new System.Drawing.Size(30, 30);
+            this.buttonPush.TabIndex = 20;
+            this.buttonPush.UseVisualStyleBackColor = false;
+            this.buttonPush.Click += new System.EventHandler(this.Play_Menu_Item_Click);
+            // 
+            // buttonPause
+            // 
+            this.buttonPause.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonPause.BackgroundImage = global::Rec_radio.Properties.Resources.pause_play;
+            this.buttonPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonPause.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonPause.ForeColor = System.Drawing.Color.Black;
+            this.buttonPause.Location = new System.Drawing.Point(246, 109);
+            this.buttonPause.Margin = new System.Windows.Forms.Padding(1);
+            this.buttonPause.Name = "buttonPause";
+            this.buttonPause.Size = new System.Drawing.Size(30, 30);
+            this.buttonPause.TabIndex = 30;
+            this.buttonPause.UseVisualStyleBackColor = false;
+            this.buttonPause.Click += new System.EventHandler(this.Pause_Menu_Item_Click);
+            // 
+            // buttonRemote
+            // 
+            this.buttonRemote.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonRemote.BackgroundImage = global::Rec_radio.Properties.Resources.refrech;
+            this.buttonRemote.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonRemote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRemote.FlatAppearance.BorderSize = 0;
+            this.buttonRemote.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRemote.ForeColor = System.Drawing.Color.Black;
+            this.buttonRemote.ImageKey = "(отсутствует)";
+            this.buttonRemote.Location = new System.Drawing.Point(526, 92);
+            this.buttonRemote.Name = "buttonRemote";
+            this.buttonRemote.Size = new System.Drawing.Size(30, 30);
+            this.buttonRemote.TabIndex = 16;
+            this.buttonRemote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonRemote.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttonRemote.UseVisualStyleBackColor = false;
+            this.buttonRemote.Click += new System.EventHandler(this.Button_Click_Remonte);
+            // 
+            // buttonSaveSettings
+            // 
+            this.buttonSaveSettings.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonSaveSettings.BackgroundImage = global::Rec_radio.Properties.Resources.save;
+            this.buttonSaveSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonSaveSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSaveSettings.FlatAppearance.BorderSize = 0;
+            this.buttonSaveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSaveSettings.ForeColor = System.Drawing.Color.Black;
+            this.buttonSaveSettings.ImageKey = "(отсутствует)";
+            this.buttonSaveSettings.Location = new System.Drawing.Point(521, 77);
+            this.buttonSaveSettings.Name = "buttonSaveSettings";
+            this.buttonSaveSettings.Size = new System.Drawing.Size(30, 30);
+            this.buttonSaveSettings.TabIndex = 1;
+            this.buttonSaveSettings.UseVisualStyleBackColor = false;
+            this.buttonSaveSettings.Click += new System.EventHandler(this.ButtonSaveSettings_Click);
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnPlay.Location = new System.Drawing.Point(631, 430);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(235, 50);
+            this.btnPlay.TabIndex = 34;
+            this.btnPlay.Text = "Play Audio";
+            this.btnPlay.UseVisualStyleBackColor = false;
+            // 
+            // txtPath
+            // 
+            this.txtPath.Location = new System.Drawing.Point(714, 387);
+            this.txtPath.Name = "txtPath";
+            this.txtPath.ReadOnly = true;
+            this.txtPath.Size = new System.Drawing.Size(153, 20);
+            this.txtPath.TabIndex = 33;
+            this.txtPath.Visible = false;
+            // 
+            // btnSaveTN
+            // 
+            this.btnSaveTN.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSaveTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSaveTN.Location = new System.Drawing.Point(631, 495);
+            this.btnSaveTN.Name = "btnSaveTN";
+            this.btnSaveTN.Size = new System.Drawing.Size(235, 50);
+            this.btnSaveTN.TabIndex = 32;
+            this.btnSaveTN.Text = "Save File";
+            this.btnSaveTN.UseVisualStyleBackColor = false;
+            // 
+            // labelTime
+            // 
+            this.labelTime.AutoSize = true;
+            this.labelTime.Location = new System.Drawing.Point(629, 347);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(71, 13);
+            this.labelTime.TabIndex = 31;
+            this.labelTime.Text = "Execute time:";
+            // 
+            // txtTime
+            // 
+            this.txtTime.Location = new System.Drawing.Point(714, 347);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.ReadOnly = true;
+            this.txtTime.Size = new System.Drawing.Size(153, 20);
+            this.txtTime.TabIndex = 30;
+            // 
+            // labelConf
+            // 
+            this.labelConf.AutoSize = true;
+            this.labelConf.Location = new System.Drawing.Point(629, 309);
+            this.labelConf.Name = "labelConf";
+            this.labelConf.Size = new System.Drawing.Size(64, 13);
+            this.labelConf.TabIndex = 29;
+            this.labelConf.Text = "Confidence:";
+            // 
+            // txtConf
+            // 
+            this.txtConf.Location = new System.Drawing.Point(714, 309);
+            this.txtConf.Name = "txtConf";
+            this.txtConf.ReadOnly = true;
+            this.txtConf.Size = new System.Drawing.Size(153, 20);
+            this.txtConf.TabIndex = 28;
+            // 
+            // labelClass
+            // 
+            this.labelClass.AutoSize = true;
+            this.labelClass.Location = new System.Drawing.Point(629, 273);
+            this.labelClass.Name = "labelClass";
+            this.labelClass.Size = new System.Drawing.Size(35, 13);
+            this.labelClass.TabIndex = 27;
+            this.labelClass.Text = "Class:";
+            // 
+            // txtClass
+            // 
+            this.txtClass.Location = new System.Drawing.Point(714, 268);
+            this.txtClass.Name = "txtClass";
+            this.txtClass.ReadOnly = true;
+            this.txtClass.Size = new System.Drawing.Size(153, 20);
+            this.txtClass.TabIndex = 26;
+            // 
+            // btnResult
+            // 
+            this.btnResult.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnResult.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResult.ForeColor = System.Drawing.Color.LimeGreen;
+            this.btnResult.Location = new System.Drawing.Point(631, 25);
+            this.btnResult.Name = "btnResult";
+            this.btnResult.Size = new System.Drawing.Size(236, 216);
+            this.btnResult.TabIndex = 25;
+            this.btnResult.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(434, 411);
+            this.ClientSize = new System.Drawing.Size(896, 551);
+            this.Controls.Add(this.btnPlay);
+            this.Controls.Add(this.txtPath);
+            this.Controls.Add(this.btnSaveTN);
+            this.Controls.Add(this.labelTime);
+            this.Controls.Add(this.txtTime);
+            this.Controls.Add(this.labelConf);
+            this.Controls.Add(this.txtConf);
+            this.Controls.Add(this.labelClass);
+            this.Controls.Add(this.txtClass);
+            this.Controls.Add(this.btnResult);
             this.Controls.Add(this.listBoxInfo);
             this.Controls.Add(this.panelSettingPlayer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -908,15 +1039,16 @@
             this.Record.ResumeLayout(false);
             this.Record.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_Animation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFront)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
             this.panelSettingPlayer.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFront)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -984,6 +1116,17 @@
         private System.Windows.Forms.Button buttonOpenDir;
         public AudioProgressBar audioPogressBar;
         private System.Windows.Forms.CheckBox checkDataDir;
+        private System.Windows.Forms.Button triggerSoftwareBtn;
+        public System.Windows.Forms.Button btnPlay;
+        public System.Windows.Forms.TextBox txtPath;
+        public System.Windows.Forms.Button btnSaveTN;
+        private System.Windows.Forms.Label labelTime;
+        public System.Windows.Forms.TextBox txtTime;
+        private System.Windows.Forms.Label labelConf;
+        public System.Windows.Forms.TextBox txtConf;
+        private System.Windows.Forms.Label labelClass;
+        public System.Windows.Forms.TextBox txtClass;
+        public System.Windows.Forms.Button btnResult;
     }
 }
 
